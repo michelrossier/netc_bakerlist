@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" target-language="fr" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
+		<header/>
+		<body>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses">
+				<target>Addresses</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
+				<target>Titre</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.description">
+				<target>La description</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.name">
+				<target>nom</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.vorname">
+				<target>prénom</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.adresse">
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.plz">
+				<target>Plz</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.ort">
+				<target>Place</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.email">
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.www_link">
+				<target>Www Link</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.tel">
+				<target>Tél</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.fax">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
+				<target>Glutenfrei</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
+				<target>Région</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.countryname">
+				<target>Canton</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.GlutenfreiesBrot">
+				<target>Pain sans gluten</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
+				<target>boulangeries-pâtisseries confiserie</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
+				<target>Recherche par nom Bakery :</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

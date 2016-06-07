@@ -1,0 +1,45 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<f:flashMessages renderMode="div" />
+<h2>{addresses.title}</h2>
+<div>
+	{addresses.name} {addresses.vorname}<br>
+	{addresses.adresse}<br>
+	{addresses.plz} {addresses.ort}<br><br>
+	<p>
+		{addresses.description}
+	</p>
+	
+	<f:if condition="{addresses.email}">
+		<p>
+			{addresses.email}
+		</p>
+	</f:if>
+
+	<f:translate key="tx_netcbakerlist_domain_model_addresses.tel" /> : {addresses.tel}<br>
+	<f:translate key="tx_netcbakerlist_domain_model_addresses.fax" /> : {addresses.fax}<br>
+	<f:link.email email="{addresses.wwwLink}"> {addresses.wwwLink} </f:link.email>
+</div>
+
+<f:if condition="{addresses.adresse}">
+<br>
+	<a href="http://maps.google.ch/maps?f=q&source=s_q&hl=de&geocode=&q={addresses.adresse} +{addresses.plz}+{addresses.ort} " target="_blank">Google Maps Link</a>
+</f:if>
+<f:comment> <f:render partial="Addresses/Properties" arguments="{addresses:addresses}" /> 
+<f:link.action action="list">Back to list</f:link.action><br />
+</f:comment>
+
+</f:section>

@@ -1,0 +1,30 @@
+
+plugin.tx_netcbakerlist {
+	view {
+		# cat=plugin.tx_netcbakerlist/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:netc_bakerlist/Resources/Private/Templates/
+		# cat=plugin.tx_netcbakerlist/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:netc_bakerlist/Resources/Private/Partials/
+		# cat=plugin.tx_netcbakerlist/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:netc_bakerlist/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_netcbakerlist//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+module.tx_netcbakerlist {
+	view {
+		# cat=module.tx_netcbakerlist/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:netc_bakerlist/Resources/Private/Backend/Templates/
+		# cat=module.tx_netcbakerlist/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:netc_bakerlist/Resources/Private/Backend/Partials/
+		# cat=module.tx_netcbakerlist/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:netc_bakerlist/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=module.tx_netcbakerlist//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

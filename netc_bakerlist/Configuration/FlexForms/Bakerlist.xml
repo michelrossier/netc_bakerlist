@@ -1,0 +1,48 @@
+<T3DataStructure>
+<meta>
+	<langDisable>1</langDisable>
+</meta>
+<sheets>
+	<sDEF>
+		<ROOT>
+			<TCEforms>
+				<sheetTitle>Settings</sheetTitle>
+			</TCEforms>
+			<type>array</type>
+			<el>
+				<!-- Plugin action -->
+				<switchableControllerActions>
+					<TCEforms>
+						<label>Select Action</label>
+						<onChange>reload</onChange>
+						<config>
+							<type>select</type>
+							<items>
+								<numIndex index="1">
+									<numIndex index="0">Bakerlist Search</numIndex>
+									<numIndex index="1">Addresses->list;Addresses->show;</numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</TCEforms>
+				</switchableControllerActions>
+				<!-- View -->
+				<settings.storage_pid>
+					<TCEforms>
+						<label>Select storage folder for User </label>
+						<config>
+							<type>group</type>
+							<internal_type>db</internal_type>
+							<allowed>pages</allowed>
+							<size>3</size>
+							<maxitems>1</maxitems>
+							<minitems>0</minitems>
+							<show_thumbs>1</show_thumbs>
+						</config>
+					</TCEforms>
+				</settings.storage_pid>
+			</el>
+		</ROOT>
+	</sDEF>
+</sheets>
+</T3DataStructure>

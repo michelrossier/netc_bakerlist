@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
+		<header/>
+		<body>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses">
+				<source>Addresses</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.vorname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.adresse">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.plz">
+				<source>Plz</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.ort">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.www_link">
+				<source>Www Link</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.tel">
+				<source>Tel</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
+				<source>Glutenfrei</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
+				<source>Region</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
