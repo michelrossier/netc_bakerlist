@@ -31,16 +31,70 @@
 				<source>wwwLink</source>
 			</trans-unit>
 			<trans-unit id="tel.description">
-				<source>tel</source>
+				<source>Tel</source>
 			</trans-unit>
 			<trans-unit id="fax.description">
-				<source>fax</source>
+				<source>Fax</source>
 			</trans-unit>
 			<trans-unit id="glutenfrei.description">
 				<source>glutenfrei</source>
 			</trans-unit>
 			<trans-unit id="region.description">
 				<source>region</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
+				<source>bäckereien-Konditoreien-Confiserien</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
+				<source>Suche nach Bäckereinamen :</source>
+			</trans-unit>+
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.vorname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.adresse">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.plz">
+				<source>Plz</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.ort">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.www_link">
+				<source>Www Link</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.tel">
+				<source>Tel</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
+				<source>Glutenfrei</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.countryname">
+				<source>Kanton</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.GlutenfreiesBrot">
+				<source>Glutenfreies Brot</source>
+			</trans-unit>
+			<trans-unit id="addresses.storagefolder">
+				<source>Wählen Sie Speicherordner für Benutzer</source>
 			</trans-unit>
 		</body>
 	</file>

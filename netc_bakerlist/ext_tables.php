@@ -52,7 +52,7 @@ $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses'] = array(
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 
-		'languageField' => 'sys_language_uid',
+		//'languageField' => 'sys_language_uid',
 		'transOrigPointerField' => 'l10n_parent',
 		'transOrigDiffSourceField' => 'l10n_diffsource',
 		'delete' => 'deleted',

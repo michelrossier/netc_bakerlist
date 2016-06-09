@@ -47,6 +47,10 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	 */
 	public function listAction() {
 
+		// $query = $this->createQuery();
+		// $query->getQuerySettings()->setRespectSysLanguage(FALSE);
+		// $query->getQuerySettings()->setSysLanguageUid(1);
+		
 		$mydata = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_netcbakerlist_netcbakerlist');
 
 		$backeryname = $mydata['backeryname'];
@@ -100,6 +104,7 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	 * @return void
 	 */
 	public function showAction(\Netcbakerlist\NetcBakerlist\Domain\Model\Addresses $addresses) {
+		//$add_show = $this->addressesRepository->show();
 		$this->view->assign('addresses', $addresses);
 	}
 
@@ -113,23 +118,25 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 		$mycsvfile = $_FILES;
 		//$csv = $this->addressesRepository->importcsv($filedata);
 		//$this->view->assign('csv', $csv);
-
+		
 		$tmp = $mycsvfile['tx_netcbakerlist_web_netcbakerlistnetcbakerlistfile']['tmp_name']['file'];
     	$name = $mycsvfile['tx_netcbakerlist_web_netcbakerlistnetcbakerlistfile']['name']['file'];
-    	$newlocation = $_SERVER['DOCUMENT_ROOT'].'html/netc/fileadmin/csvfile/'.$name;
-
-    	if(move_uploaded_file($tmp, $newlocation)){
-    		 $csvext = pathinfo($newlocation, PATHINFO_EXTENSION); 
-
+    	// $newlocation = $_SERVER['DOCUMENT_ROOT'].'/netc/fileadmin/csvfile/'.$name;
+    	$file = pathinfo($_FILES['tx_netcbakerlist_web_netcbakerlistnetcbakerlistfile']['tmp_name']['file']);
+		
+    	if($tmp){
+    		 $csvext = pathinfo($_FILES['tx_netcbakerlist_web_netcbakerlistnetcbakerlistfile']['name']['file'], PATHINFO_EXTENSION); 
+    		 	
     		 if($csvext == 'csv'){
-    		 	$file = fopen($newlocation,"r");
+    		 	$file = fopen($_FILES['tx_netcbakerlist_web_netcbakerlistnetcbakerlistfile']['tmp_name']['file'],"r");
 
     		 	// once upload new csv file first truncate table.and insert new csv records.
     		 	$GLOBALS['TYPO3_DB']->exec_TRUNCATEquery('tx_netcbakerlist_domain_model_addresses');
 	    		while(!feof($file))
 	  			{
-	  				//$csvdata = fgetcsv($file,0,';');
-	  				$csvdata = fgetcsv($file,0,',');
+	  				$csvdata = fgetcsv($file,0,';');
+	  				//$csvdata = fgetcsv($file,0,',');
+	  				
 	  				$records = NULL;
 	    			if($csvdata[0]!='' && $csvdata[0]!='Title'){
 
@@ -139,8 +146,7 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	    				// $foundrecord = $this->addressesRepository->findByTitle($csvdata[0])->toArray();
 	    				// foreach($foundrecord as $c){
 	    				// 	$this->addressesRepository->remove($c);
-	    				// }    
-
+	    				// }
 						$csvdata[0]!=''?$records->setTitle($csvdata[0]):'';
 						$csvdata[1]!=''?$records->setDescription($csvdata[1]):'';
 						$csvdata[6]!=''?$records->setName($csvdata[6]):'';
@@ -157,14 +163,15 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 						$this->addressesRepository->add($records);
 	    			}
 	    		}
+
 	    		$this->view->assing("data", $count1);
 				fclose($file);
-				unlink($newlocation);
+				//unlink($newlocation);
 				$this->addFlashMessage('Records are successfully uploaded. Thank you!');
 				$this->redirect('belist');
     		 }else{
     		 	$this->addFlashMessage('uploaded file are not csv file format Please upload csv file.');
-    		 	unlink($newlocation);
+    		 	//unlink($newlocation);
     		 	$this->redirect('belist');
     		 }
 	    }else{

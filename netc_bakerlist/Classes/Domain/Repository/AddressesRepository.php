@@ -31,8 +31,25 @@ namespace Netcbakerlist\NetcBakerlist\Domain\Repository;
  * The repository for Addresses
  */
 class AddressesRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	// public function findAll()
+	// {
+	// 	$query = $this->createQuery();
+	// 	$query->getQuerySettings()->setRespectSysLanguage(FALSE);	
+	// 	$query->getQuerySettings()->setSysLanguageUid(0);
+	// 	return $query->execute();
+	// }
+	// public function show()
+	// {
+	// 	$query = $this->createQuery();
+	// 	$query->getQuerySettings()->setRespectSysLanguage(FALSE);	
+	// 	$query->getQuerySettings()->setSysLanguageUid(0);
+	// 	return $query->execute();
+	// }
 
     public function findortBy($backeryname,$ort,$country,$GlutenfreiesBrot,$startpos) {
+    	$query = $this->createQuery();
+		// $query->getQuerySettings()->setRespectSysLanguage(FALSE);	
+		// $query->getQuerySettings()->setSysLanguageUid(0);
 
     	if($startpos==''){
 			$startpos = 0;
@@ -49,9 +66,6 @@ class AddressesRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 			// $GlutenfreiesBrot = $GlutenfreiesBrot2;
 		}
 		
-        $query = $this->createQuery();
-        $query->getQuerySettings()->setRespectSysLanguage(FALSE);
-
         if($GlutenfreiesBrot==''){
         	$GlutenfreiesBrot = 0;
         }

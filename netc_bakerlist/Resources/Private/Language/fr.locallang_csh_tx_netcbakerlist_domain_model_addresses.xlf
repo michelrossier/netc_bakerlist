@@ -3,8 +3,50 @@
 	<file source-language="de" target-language="fr" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
 		<header/>
 		<body>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses">
-				<target>Addresses</target>
+			<trans-unit id="title.description">
+				<target>Titre</target>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<target>description</target>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<target>name</target>
+			</trans-unit>
+			<trans-unit id="vorname.description">
+				<target>vorname</target>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<target>adresse</target>
+			</trans-unit>
+			<trans-unit id="plz.description">
+				<target>plz</target>
+			</trans-unit>
+			<trans-unit id="ort.description">
+				<target>ort</target>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<target>email</target>
+			</trans-unit>
+			<trans-unit id="www_link.description">
+				<target>wwwLink</target>
+			</trans-unit>
+			<trans-unit id="tel.description">
+				<target>Tél</target>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="glutenfrei.description">
+				<target>glutenfrei</target>
+			</trans-unit>
+			<trans-unit id="region.description">
+				<target>region</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
+				<target>boulangeries-pâtisseries confiserie</target>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
+				<target>Recherche par nom Bakery :</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
 				<target>Titre</target>
@@ -51,20 +93,8 @@
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.GlutenfreiesBrot">
 				<target>Pain sans gluten</target>
 			</trans-unit>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
-				<target>boulangeries-pâtisseries confiserie</target>
-			</trans-unit>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
-				<target>Recherche par nom Bakery :</target>
-			</trans-unit>
 			<trans-unit id="addresses.storagefolder">
 				<target>Sélectionnez le dossier de stockage pour les utilisateurs</target>
-			</trans-unit>
-			<trans-unit id="addresses.selectaction">
-				<target>Sélectionner une action</target>
-			</trans-unit>
-			<trans-unit id="addresses.BakerlistSearch">
-				<target>Baker Liste Recherche</target>
 			</trans-unit>
 		</body>
 	</file>

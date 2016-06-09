@@ -57,6 +57,15 @@
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
 				<source>Suche nach Bäckereinamen :</source>
 			</trans-unit>
+			<trans-unit id="addresses.storagefolder">
+				<source>Wählen Sie Speicherordner für Benutzer</source>
+			</trans-unit>
+			<trans-unit id="addresses.selectaction">
+				<source>Wählen Sie Aktion</source>
+			</trans-unit>
+			<trans-unit id="addresses.BakerlistSearch">
+				<source>Baker Suchen Liste</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

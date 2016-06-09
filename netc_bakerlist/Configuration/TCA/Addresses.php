@@ -6,42 +6,42 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region',
+		'showRecordFieldList' => 'l10n_diffsource, hidden, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => ';;;;1-1-1, l10n_diffsource, hidden;;1, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
 	),
 	'columns' => array(
 	
-		'sys_language_uid' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'sys_language',
-				'foreign_table_where' => 'ORDER BY sys_language.title',
-				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
-				),
-			),
-		),
-		'l10n_parent' => array(
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
-			'config' => array(
-				'type' => 'select',
-				'items' => array(
-					array('', 0),
-				),
-				'foreign_table' => 'tx_netcbakerlist_domain_model_addresses',
-				'foreign_table_where' => 'AND tx_netcbakerlist_domain_model_addresses.pid=###CURRENT_PID### AND tx_netcbakerlist_domain_model_addresses.sys_language_uid IN (-1,0)',
-			),
-		),
+		// 'sys_language_uid' => array(
+		// 	'exclude' => 1,
+		// 	'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+		// 	'config' => array(
+		// 		'type' => 'select',
+		// 		'foreign_table' => 'sys_language',
+		// 		'foreign_table_where' => 'ORDER BY sys_language.title',
+		// 		'items' => array(
+		// 			array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
+		// 			array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
+		// 		),
+		// 	),
+		// ),
+		// 'l10n_parent' => array(
+		// 	'displayCond' => 'FIELD:sys_language_uid:>:0',
+		// 	'exclude' => 1,
+		// 	'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+		// 	'config' => array(
+		// 		'type' => 'select',
+		// 		'items' => array(
+		// 			array('', 0),
+		// 		),
+		// 		'foreign_table' => 'tx_netcbakerlist_domain_model_addresses',
+		// 		'foreign_table_where' => 'AND tx_netcbakerlist_domain_model_addresses.pid=###CURRENT_PID### AND tx_netcbakerlist_domain_model_addresses.sys_language_uid IN (-1,0)',
+		// 	),
+		// ),
 		'l10n_diffsource' => array(
 			'config' => array(
 				'type' => 'passthrough',
@@ -138,11 +138,16 @@ $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang.xlf:tx_netcbakerlist_domain_model_addresses.adresse',
 			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'type' => 'input',
+				'size' => 30,
 				'eval' => 'trim'
-			)
+			),
+			// 'config' => array(
+			// 	'type' => 'text',
+			// 	'cols' => 40,
+			// 	'rows' => 15,
+			// 	'eval' => 'trim'
+			// )
 		),
 		'plz' => array(
 			'exclude' => 1,
@@ -175,11 +180,16 @@ $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang.xlf:tx_netcbakerlist_domain_model_addresses.www_link',
 			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'type' => 'input',
+				'size' => 30,
 				'eval' => 'trim'
-			)
+			),
+			// 'config' => array(
+			// 	'type' => 'text',
+			// 	'cols' => 40,
+			// 	'rows' => 15,
+			// 	'eval' => 'trim'
+			// )
 		),
 		'tel' => array(
 			'exclude' => 1,

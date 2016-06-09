@@ -378,5 +378,4 @@ class Addresses extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setRegion($region) {
 		$this->region = $region;
 	}
-
 }
