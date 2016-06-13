@@ -40,7 +40,7 @@ CREATE TABLE tx_netcbakerlist_domain_model_addresses (
 	sorting int(11) DEFAULT '0' NOT NULL,
 
 	-- sys_language_uid int(11) DEFAULT '0' NOT NULL,
-	-- l10n_parent int(11) DEFAULT '0' NOT NULL,
+	l10n_parent int(11) DEFAULT '0' NOT NULL,
 	l10n_diffsource mediumblob,
 
 	PRIMARY KEY (uid),

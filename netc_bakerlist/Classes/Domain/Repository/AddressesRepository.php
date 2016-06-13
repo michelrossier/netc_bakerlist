@@ -139,11 +139,11 @@ class AddressesRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
         $query->setOffset($startpos);
 		$query->setLimit(20);
 
-		$query->setOrderings(
-		    array(
-		        'title' => \Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
-		    )
-		);
+		// $query->setOrderings(
+		//     array(
+		//         'title' => \Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
+		//     )
+		// );
 
 		$result['data'] = $query->execute();
 

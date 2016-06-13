@@ -9,7 +9,7 @@ $GLOBALS['TCA']['tx_netcbakerlist_domain_model_addresses'] = array(
 		'showRecordFieldList' => 'l10n_diffsource, hidden, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region',
 	),
 	'types' => array(
-		'1' => array('showitem' => ';;;;1-1-1, l10n_diffsource, hidden;;1, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'l10n_diffsource, hidden;;1, title, description, name, vorname, adresse, plz, ort, email, www_link, tel, fax, glutenfrei, region, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),

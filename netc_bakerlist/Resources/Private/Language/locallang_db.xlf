@@ -40,7 +40,7 @@
 				<source>Fax</source>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
-				<source>Glutenfrei</source>
+				<source>Glutenfreies Brot</source>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
 				<source>Region</source>

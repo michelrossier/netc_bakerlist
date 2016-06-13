@@ -13,7 +13,6 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<f:flashMessages renderMode="div" />
 <h2>{addresses.title}</h2>
 <div>
 	{addresses.name} {addresses.vorname}<br>
@@ -28,9 +27,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			{addresses.email}
 		</p>
 	</f:if>
-
-	<f:translate key="LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang_csh_tx_netcbakerlist_domain_model_addresses.xlf:tel.description" /> : {addresses.tel}<br>
-	<f:translate key="LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang_csh_tx_netcbakerlist_domain_model_addresses.xlf:fax.description" /> : {addresses.fax}<br>
+	<f:if condition="{addresses.tel}">
+		<f:translate key="LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang_csh_tx_netcbakerlist_domain_model_addresses.xlf:tel.description" /> : {addresses.tel}<br>
+	</f:if>
+	<f:if condition="{addresses.fax}">
+		<f:translate key="LLL:EXT:netc_bakerlist/Resources/Private/Language/locallang_csh_tx_netcbakerlist_domain_model_addresses.xlf:fax.description" /> : {addresses.fax}<br>
+	</f:if>
 	<f:link.email email="{addresses.wwwLink}"> {addresses.wwwLink} </f:link.email>
 </div>
 

@@ -68,8 +68,22 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 			$GlutenfreiesBrot = $mydata['GlutenfreiesBrot2'];
 		}
 
-		if($backeryname!='' || $ort!='' || $country!='' || $GlutenfreiesBrot!='' || $startpos!=''){
+		if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $backeryname))
+		{
+		    $spec_char = 1;
+		}
+		if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $ort))
+		{
+		    $spec_char = 1;
+		}
+
+		if(($backeryname!='' && $spec_char!=1) || ($ort!='' && $spec_char!=1) || $country!='' || $GlutenfreiesBrot!='' || $startpos!=''){
+			
 			$searchrecord = $this->addressesRepository->findortBy($backeryname,$ort,$country,$GlutenfreiesBrot,$startpos);
+			$searchrecord['selectedbakeryname'] = $backeryname;
+			$searchrecord['selectedort'] = $ort;
+			$searchrecord['selectedcountry'] = $country;
+			$searchrecord['selectcheck'] = $GlutenfreiesBrot;
 
 			$this->view->assign('ortaddresses', $searchrecord);
 		}
@@ -147,18 +161,18 @@ class AddressesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	    				// foreach($foundrecord as $c){
 	    				// 	$this->addressesRepository->remove($c);
 	    				// }
-						$csvdata[0]!=''?$records->setTitle($csvdata[0]):'';
-						$csvdata[1]!=''?$records->setDescription($csvdata[1]):'';
-						$csvdata[6]!=''?$records->setName($csvdata[6]):'';
-						$csvdata[7]!=''?$records->setVorname($csvdata[7]):'';
-						$csvdata[9]!=''?$records->setAdresse($csvdata[9]):'';
-						$csvdata[10]!=''?$records->setPlz($csvdata[10]):'';
-						$csvdata[11]!=''?$records->setOrt($csvdata[11]):'';
-						$csvdata[12]!=''?$records->setRegion($csvdata[12]):'';
-						$csvdata[13]!=''?$records->setEmail($csvdata[13]):'';
-						$csvdata[14]!=''?$records->setWwwLink($csvdata[14]):'';
-						$csvdata[15]!=''?$records->setTel($csvdata[15]):'';
-						$csvdata[16]!=''?$records->setFax($csvdata[16]):'';
+						$csvdata[0]!=''?$records->setTitle(utf8_decode($csvdata[0])):'';
+						$csvdata[1]!=''?$records->setDescription(utf8_decode($csvdata[1])):'';
+						$csvdata[6]!=''?$records->setName(utf8_decode($csvdata[6])):'';
+						$csvdata[7]!=''?$records->setVorname(utf8_decode($csvdata[7])):'';
+						$csvdata[9]!=''?$records->setAdresse(utf8_decode($csvdata[9])):'';
+						$csvdata[10]!=''?$records->setPlz(utf8_decode($csvdata[10])):'';
+						$csvdata[11]!=''?$records->setOrt(utf8_decode($csvdata[11])):'';
+						$csvdata[12]!=''?$records->setRegion(utf8_decode($csvdata[12])):'';
+						$csvdata[13]!=''?$records->setEmail(utf8_decode($csvdata[13])):'';
+						$csvdata[14]!=''?$records->setWwwLink(utf8_decode($csvdata[14])):'';
+						$csvdata[15]!=''?$records->setTel(utf8_decode($csvdata[15])):'';
+						$csvdata[16]!=''?$records->setFax(utf8_decode($csvdata[16])):'';
 						
 						$this->addressesRepository->add($records);
 	    			}
