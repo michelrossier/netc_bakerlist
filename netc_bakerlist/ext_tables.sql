@@ -7,7 +7,7 @@ CREATE TABLE tx_netcbakerlist_domain_model_addresses (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	title varchar(255) DEFAULT '' NOT NULL,
-	description text NOT NULL,
+	description text DEFAULT '' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
 	vorname varchar(255) DEFAULT '' NOT NULL,
 	adresse text NOT NULL,

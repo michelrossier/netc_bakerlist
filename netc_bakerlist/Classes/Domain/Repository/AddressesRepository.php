@@ -31,13 +31,22 @@ namespace Netcbakerlist\NetcBakerlist\Domain\Repository;
  * The repository for Addresses
  */
 class AddressesRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-	// public function findAll()
+	 /**
+     * @var array
+     */
+    protected $defaultOrderings = array(
+        'region' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+    );
+	//public function findAll()
 	// {
 	// 	$query = $this->createQuery();
 	// 	$query->getQuerySettings()->setRespectSysLanguage(FALSE);	
 	// 	$query->getQuerySettings()->setSysLanguageUid(0);
 	// 	return $query->execute();
-	// }
+	
+
+	 //return $allrecord;
+	//}
 	// public function show()
 	// {
 	// 	$query = $this->createQuery();
