@@ -1,73 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
+	<file source-language="de" target-language="fr" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
 		<header/>
 		<body>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses">
-				<source>Addresses</source>
+				<target>Addresses</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
-				<source>Titel</source>
+				<target>Titre</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.description">
-				<source>Beschreibung</source>
+				<target>La description</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.name">
-				<source>Name</source>
+				<target>nom</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.vorname">
-				<source>Vorname</source>
+				<target>prénom</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.adresse">
-				<source>Adresse</source>
+				<target>Adresse</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.plz">
-				<source>Plz</source>
+				<target>Plz</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.ort">
-				<source>Ort</source>
+				<target>Place</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.email">
-				<source>Email</source>
+				<target>Email</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.www_link">
-				<source>Www Link</source>
+				<target>Www Link</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.tel">
-				<source>Tel</source>
+				<target>Tél</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.fax">
-				<source>Fax</source>
+				<target>Fax</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
-				<source>Glutenfreies Brot</source>
+				<target>Glutenfrei</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
-				<source>Region</source>
+				<target>Région</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.countryname">
-				<source>Kanton</source>
+				<target>Canton</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.GlutenfreiesBrot">
-				<source>Glutenfreies Brot</source>
+				<target>Pain sans gluten</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
-				<source>bäckereien-Konditoreien-Confiserien</source>
+				<target>boulangeries-pâtisseries confiserie</target>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
-				<source>Suche nach Bäckereinamen :</source>
+				<target>Recherche par nom Bakery :</target>
 			</trans-unit>
 			<trans-unit id="addresses.storagefolder">
-				<source>Wählen Sie Speicherordner für Benutzer</source>
+				<target>Sélectionnez le dossier de stockage pour les utilisateurs</target>
 			</trans-unit>
 			<trans-unit id="addresses.selectaction">
-				<source>Wählen Sie Aktion</source>
+				<target>Sélectionner une action</target>
 			</trans-unit>
 			<trans-unit id="addresses.BakerlistSearch">
-				<source>Baker Suchen Liste</source>
-			</trans-unit>
-			<trans-unit id="addresses.Glutenfreie">
-				<source>Glutenfreie Bäckereien</source>
+				<target>Baker Liste Recherche</target>
 			</trans-unit>
 		</body>
 	</file>

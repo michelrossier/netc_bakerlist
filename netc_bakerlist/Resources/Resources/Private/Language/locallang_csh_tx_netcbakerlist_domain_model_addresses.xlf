@@ -3,9 +3,51 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2016-05-27T11:23:34Z" product-name="netc_bakerlist">
 		<header/>
 		<body>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses">
-				<source>Addresses</source>
+			<trans-unit id="title.description">
+				<source>title</source>
 			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="vorname.description">
+				<source>vorname</source>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<source>adresse</source>
+			</trans-unit>
+			<trans-unit id="plz.description">
+				<source>plz</source>
+			</trans-unit>
+			<trans-unit id="ort.description">
+				<source>ort</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="www_link.description">
+				<source>wwwLink</source>
+			</trans-unit>
+			<trans-unit id="tel.description">
+				<source>Tel</source>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="glutenfrei.description">
+				<source>glutenfrei</source>
+			</trans-unit>
+			<trans-unit id="region.description">
+				<source>region</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
+				<source>bäckereien-Konditoreien-Confiserien</source>
+			</trans-unit>
+			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
+				<source>Suche nach Bäckereinamen :</source>
+			</trans-unit>+
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.title">
 				<source>Titel</source>
 			</trans-unit>
@@ -40,7 +82,7 @@
 				<source>Fax</source>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.glutenfrei">
-				<source>Glutenfreies Brot</source>
+				<source>Glutenfrei</source>
 			</trans-unit>
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.region">
 				<source>Region</source>
@@ -51,23 +93,8 @@
 			<trans-unit id="tx_netcbakerlist_domain_model_addresses.GlutenfreiesBrot">
 				<source>Glutenfreies Brot</source>
 			</trans-unit>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses.backerytitle">
-				<source>bäckereien-Konditoreien-Confiserien</source>
-			</trans-unit>
-			<trans-unit id="tx_netcbakerlist_domain_model_addresses.searchbyname">
-				<source>Suche nach Bäckereinamen :</source>
-			</trans-unit>
 			<trans-unit id="addresses.storagefolder">
 				<source>Wählen Sie Speicherordner für Benutzer</source>
-			</trans-unit>
-			<trans-unit id="addresses.selectaction">
-				<source>Wählen Sie Aktion</source>
-			</trans-unit>
-			<trans-unit id="addresses.BakerlistSearch">
-				<source>Baker Suchen Liste</source>
-			</trans-unit>
-			<trans-unit id="addresses.Glutenfreie">
-				<source>Glutenfreie Bäckereien</source>
 			</trans-unit>
 		</body>
 	</file>

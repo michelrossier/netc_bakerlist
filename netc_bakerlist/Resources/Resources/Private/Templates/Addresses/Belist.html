@@ -1,0 +1,67 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Belist.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<f:flashMessages />
+
+<h1>Import CSV File</h1>
+
+<f:form action="import"  enctype="multipart/form-data"  name="newfile" object="{newfile}">
+	<f:form.upload name="file" />
+	<f:form.submit name="upload" value="Upload" />
+</f:form>
+
+<f:comment>
+	<table  class="tx_netcbakerlist" >
+		<tr>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.title" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.description" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.name" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.vorname" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.adresse" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.plz" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.ort" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.email" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.www_link" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.tel" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.fax" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.glutenfrei" /></th>
+			<th><f:translate key="tx_netcbakerlist_domain_model_addresses.region" /></th>
+			<th> </th>
+			<th> </th>
+		</tr>
+
+		<f:for each="{addresses}" as="addresse">
+			<tr>
+				<td><f:link.action action="show" arguments="{addresse : addresse}"> {addresse.title}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.description}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.name}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.vorname}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.adresse}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.plz}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.ort}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.email}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.wwwLink}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.tel}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.fax}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.glutenfrei}</f:link.action></td>
+				<td><f:link.action action="show" arguments="{addresses : addresses}"> {addresses.region}</f:link.action></td>
+				<td><f:link.action action="edit" arguments="{addresses : addresses}">Edit</f:link.action></td>
+				<td><f:link.action action="delete" arguments="{addresses : addresses}">Delete</f:link.action></td>
+			</tr>
+		</f:for>
+	</table>
+	<f:link.action action="new">New Addresses</f:link.action>
+</f:comment>
+</f:section>
